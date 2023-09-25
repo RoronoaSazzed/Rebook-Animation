@@ -1,0 +1,382 @@
+/* #end-screen {
+  opacity: 0;
+} */
+
+/* #tick-section {
+  opacity: 0;
+} */
+
+/* #booking-screen {
+  opacity: 0;
+} */
+
+/* #found-for {
+  opacity: 0;
+} */
+
+/* #searching-screen {
+  opacity: 0;
+} */
+
+/* #mail-box {
+  opacity: 0;
+} */
+
+/* #pop-up-sec {
+  opacity: 0;
+} */
+
+/* 1st Sagement Animation */
+
+#phone-content {
+  transform-box: fill-box;
+  transform-origin: center top;
+  animation: phone__content 1.5s linear 1s forwards;
+}
+
+@keyframes phone__content {
+  0% {
+    transform: translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-510px);
+  }
+}
+
+#pop-up-sec {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transform: translateY(218px);
+  animation: pop__up__sec 0.35s linear 3.5s forwards;
+}
+
+@keyframes pop__up__sec {
+  0% {
+    transform: translateY(218px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#bg-btn {
+  fill: transparent;
+  animation: bg__pop__up 0.5s linear 4.5s;
+}
+
+@keyframes bg__pop__up {
+  0%,
+  100% {
+    fill: transparent;
+  }
+
+  50% {
+    fill: rgba(176, 176, 176, 0.5);
+  }
+}
+
+#mail-box {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateX(330px);
+  animation: mail__box__in 0.25s linear 5.25s forwards;
+}
+
+@keyframes mail__box__in {
+  0% {
+    transform: translateX(330px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+#mail-address {
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  animation: mail__adress 0.5s linear 5.75s forwards;
+}
+
+@keyframes mail__adress {
+  0% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+#send-btn-bg rect {
+  animation: send__btn__bg 0.25s linear 7s;
+}
+
+@keyframes send__btn__bg {
+  0%,
+  100% {
+    fill: #0094ff;
+  }
+
+  50% {
+    fill: #025795;
+  }
+}
+
+/* 2nd Sagement Animation */
+
+#searching-screen {
+  transform-box: fill-box;
+  transform-origin: center bottom;
+  transform: translateY(-683px);
+  animation: searching__screen 0.5s linear 7.5s forwards;
+}
+
+@keyframes searching__screen {
+  0% {
+    transform: translateY(-683px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#num-1,
+#num-2,
+#num-3,
+#num-4,
+#num-5 {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateY(55px);
+}
+
+#num-1 {
+  animation: searching__nums 0.5s linear 8s forwards;
+}
+
+#num-2 {
+  animation: searching__nums 0.5s linear 8.5s forwards;
+}
+
+#num-3 {
+  animation: searching__nums 0.5s linear 9s forwards;
+}
+
+#num-4 {
+  animation: searching__nums 0.5s linear 9.5s forwards;
+}
+
+@keyframes searching__nums {
+  0% {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+
+  20%,
+  80% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-55px);
+  }
+}
+
+#num-5 {
+  animation: searching__nums5 0.5s linear 10s forwards;
+}
+
+@keyframes searching__nums5 {
+  0% {
+    opacity: 0;
+    transform: translateY(55px);
+  }
+
+  20%,
+  80%,
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#searching-sec {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: searching__sec 0.25s linear 10.5s forwards;
+}
+
+@keyframes searching__sec {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(295px);
+  }
+}
+
+#found-for {
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateX(295px);
+  animation: found__for 0.25s linear 11s forwards;
+}
+
+@keyframes found__for {
+  0% {
+    transform: translateX(295px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+#found-sec {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: found__sec 0.25s linear 11.5s 4 alternate;
+}
+
+@keyframes found__sec {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+#rebook-btn-bg rect {
+  fill: #00194f;
+  animation: reebook__btn__bg 0.25s linear 13.5s forwards;
+}
+
+@keyframes reebook__btn__bg {
+  0%,
+  100% {
+    fill: #00194f;
+  }
+
+  50% {
+    fill: #053f9a;
+  }
+}
+
+#booking-screen {
+  transform-box: fill-box;
+  transform-origin: center left;
+  transform: translateX(330px);
+  animation: booking__screen 0.25s linear 14.5s forwards;
+}
+
+@keyframes booking__screen {
+  0% {
+    transform: translateX(330px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+#book-room-btn-bg {
+  animation: bookroom__btn__bg 0.5s linear 15.5s forwards;
+}
+
+@keyframes bookroom__btn__bg {
+  0%,
+  100% {
+    fill: #01275a;
+  }
+
+  50% {
+    fill: #00429e;
+  }
+}
+
+#tick-section {
+  transform-box: fill-box;
+  transform-origin: center top;
+  transform: translateY(682px);
+  animation: tick__section 0.5s linear 16.5s forwards;
+}
+
+/* 291.5710754394531 */
+
+@keyframes tick__section {
+  0% {
+    transform: translateY(682px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#tick {
+  stroke-dashoffset: 291.5710754394531;
+  stroke-dasharray: 291.5710754394531;
+  animation: tickIn 1.4s linear 17.5s forwards;
+}
+
+@keyframes tickIn {
+  0% {
+    stroke-dashoffset: 291.5710754394531;
+  }
+
+  20%,
+  80% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -291.5710754394531;
+  }
+}
+
+/* 3rd Sagement */
+
+#congrats-text {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateY(-50px);
+  animation: fade__in 0.75s linear 19s forwards;
+}
+
+@keyframes fade__in {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+#saved-amount-text {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateY(-50px);
+  animation: fade__in 0.75s linear 19.75s forwards;
+}
+
+#cancel-btn {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: translateY(-50px);
+  animation: fade__in 0.75s linear 20.5s forwards;
+}
