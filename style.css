@@ -1,37 +1,40 @@
-/* #end-screen {
-  opacity: 0;
-} */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-/* #tick-section {
-  opacity: 0;
-} */
+.main__section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
 
-/* #booking-screen {
-  opacity: 0;
-} */
-
-/* #found-for {
-  opacity: 0;
-} */
-
-/* #searching-screen {
-  opacity: 0;
-} */
-
-/* #mail-box {
-  opacity: 0;
-} */
-
-/* #pop-up-sec {
-  opacity: 0;
-} */
+.mobile__section {
+  width: 100%;
+  width: 354px;
+  height: 708px;
+  overflow: hidden;
+  border-radius: 55px;
+}
 
 /* 1st Sagement Animation */
 
 #phone-content {
   transform-box: fill-box;
   transform-origin: center top;
-  animation: phone__content 1.5s linear 1s forwards;
+}
+
+#phone-content.blur,
+#apple-top-bar.blur {
+  filter: blur(25px);
+}
+
+#phone-content.animate {
+  animation: phone__content 1.5s linear 0.5s forwards;
 }
 
 @keyframes phone__content {
@@ -48,7 +51,10 @@
   transform-box: fill-box;
   transform-origin: center bottom;
   transform: translateY(218px);
-  animation: pop__up__sec 0.35s linear 3.5s forwards;
+}
+
+#pop-up-sec.animate {
+  animation: pop__up__sec 0.35s linear 1s forwards;
 }
 
 @keyframes pop__up__sec {
@@ -63,7 +69,9 @@
 
 #bg-btn {
   fill: transparent;
-  animation: bg__pop__up 0.5s linear 4.5s;
+}
+#bg-btn.animate {
+  animation: bg__pop__up 0.25s linear 0.75s;
 }
 
 @keyframes bg__pop__up {
@@ -81,7 +89,10 @@
   transform-box: fill-box;
   transform-origin: center;
   transform: translateX(330px);
-  animation: mail__box__in 0.25s linear 5.25s forwards;
+}
+
+#mail-box.animate {
+  animation: mail__box__in 0.25s linear 0.25s forwards;
 }
 
 @keyframes mail__box__in {
@@ -96,7 +107,10 @@
 
 #mail-address {
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-  animation: mail__adress 0.5s linear 5.75s forwards;
+}
+
+#mail-address.animate {
+  animation: mail__adress 0.5s linear 0.5s forwards;
 }
 
 @keyframes mail__adress {
@@ -109,8 +123,8 @@
   }
 }
 
-#send-btn-bg rect {
-  animation: send__btn__bg 0.25s linear 7s;
+#send-btn-bg rect.animate {
+  animation: send__btn__bg 0.25s linear 0.5s;
 }
 
 @keyframes send__btn__bg {
@@ -130,7 +144,10 @@
   transform-box: fill-box;
   transform-origin: center bottom;
   transform: translateY(-683px);
-  animation: searching__screen 0.5s linear 7.5s forwards;
+}
+
+#searching-screen.animate {
+  animation: searching__screen 0.5s linear forwards;
 }
 
 @keyframes searching__screen {
@@ -154,20 +171,20 @@
   transform: translateY(55px);
 }
 
-#num-1 {
-  animation: searching__nums 0.5s linear 8s forwards;
+#num-1.animate {
+  animation: searching__nums 0.5s linear 0.5s forwards;
 }
 
-#num-2 {
-  animation: searching__nums 0.5s linear 8.5s forwards;
+#num-2.animate {
+  animation: searching__nums 0.5s linear forwards;
 }
 
-#num-3 {
-  animation: searching__nums 0.5s linear 9s forwards;
+#num-3.animate {
+  animation: searching__nums 0.5s linear forwards;
 }
 
-#num-4 {
-  animation: searching__nums 0.5s linear 9.5s forwards;
+#num-4.animate {
+  animation: searching__nums 0.5s linear forwards;
 }
 
 @keyframes searching__nums {
@@ -188,8 +205,8 @@
   }
 }
 
-#num-5 {
-  animation: searching__nums5 0.5s linear 10s forwards;
+#num-5.animate {
+  animation: searching__nums5 0.5s linear forwards;
 }
 
 @keyframes searching__nums5 {
@@ -209,7 +226,10 @@
 #searching-sec {
   transform-box: fill-box;
   transform-origin: center;
-  animation: searching__sec 0.25s linear 10.5s forwards;
+}
+
+#searching-sec.animate {
+  animation: searching__sec 0.25s linear forwards;
 }
 
 @keyframes searching__sec {
@@ -226,7 +246,10 @@
   transform-box: fill-box;
   transform-origin: center;
   transform: translateX(295px);
-  animation: found__for 0.25s linear 11s forwards;
+}
+
+#found-for.animate {
+  animation: found__for 0.25s linear 0.75s forwards;
 }
 
 @keyframes found__for {
@@ -242,7 +265,10 @@
 #found-sec {
   transform-box: fill-box;
   transform-origin: center;
-  animation: found__sec 0.25s linear 11.5s 4 alternate;
+}
+
+#found-sec.animate {
+  animation: found__sec 0.25s linear 0.5s 4 alternate;
 }
 
 @keyframes found__sec {
@@ -257,7 +283,10 @@
 
 #rebook-btn-bg rect {
   fill: #00194f;
-  animation: reebook__btn__bg 0.25s linear 13.5s forwards;
+}
+
+#rebook-btn-bg rect.animate {
+  animation: reebook__btn__bg 0.25s linear forwards;
 }
 
 @keyframes reebook__btn__bg {
@@ -267,7 +296,7 @@
   }
 
   50% {
-    fill: #053f9a;
+    fill: #2a7cff;
   }
 }
 
@@ -275,7 +304,10 @@
   transform-box: fill-box;
   transform-origin: center left;
   transform: translateX(330px);
-  animation: booking__screen 0.25s linear 14.5s forwards;
+}
+
+#booking-screen.animate {
+  animation: booking__screen 0.25s linear 0.1s forwards;
 }
 
 @keyframes booking__screen {
@@ -288,8 +320,8 @@
   }
 }
 
-#book-room-btn-bg {
-  animation: bookroom__btn__bg 0.5s linear 15.5s forwards;
+#book-room-btn-bg.animate {
+  animation: bookroom__btn__bg 0.25s linear 1s forwards;
 }
 
 @keyframes bookroom__btn__bg {
@@ -299,7 +331,7 @@
   }
 
   50% {
-    fill: #00429e;
+    fill: #0047aa;
   }
 }
 
@@ -307,9 +339,11 @@
   transform-box: fill-box;
   transform-origin: center top;
   transform: translateY(682px);
-  animation: tick__section 0.5s linear 16.5s forwards;
 }
 
+#tick-section.animate {
+  animation: tick__section 0.25s linear 0.25s forwards;
+}
 /* 291.5710754394531 */
 
 @keyframes tick__section {
@@ -325,7 +359,10 @@
 #tick {
   stroke-dashoffset: 291.5710754394531;
   stroke-dasharray: 291.5710754394531;
-  animation: tickIn 1.4s linear 17.5s forwards;
+}
+
+#tick.animate {
+  animation: tickIn 1.25s linear 0.75s forwards;
 }
 
 @keyframes tickIn {
@@ -350,7 +387,10 @@
   transform-box: fill-box;
   transform-origin: center;
   transform: translateY(-50px);
-  animation: fade__in 0.75s linear 19s forwards;
+}
+
+#congrats-text.animate {
+  animation: fade__in 0.5s linear 0.75s forwards;
 }
 
 @keyframes fade__in {
@@ -370,7 +410,10 @@
   transform-box: fill-box;
   transform-origin: center;
   transform: translateY(-50px);
-  animation: fade__in 0.75s linear 19.75s forwards;
+}
+
+#saved-amount-text.animate {
+  animation: fade__in 0.5s linear 0.5s forwards;
 }
 
 #cancel-btn {
@@ -378,5 +421,64 @@
   transform-box: fill-box;
   transform-origin: center;
   transform: translateY(-50px);
-  animation: fade__in 0.75s linear 20.5s forwards;
+}
+
+#cancel-btn.animate {
+  animation: fade__in 0.5s linear 0.5s forwards;
+}
+
+/* Input tracker css */
+
+.options {
+  padding: 20px 40px;
+}
+
+.options h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 30px;
+}
+
+.options div label {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.options div label span,
+.options div label div {
+  font-family: "Raleway", sans-serif;
+  font-size: 24px;
+  line-height: 35.5px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  background-color: none;
+  border-radius: 15px;
+  transition-duration: 0.5s;
+  transition-property: background-color color;
+}
+
+.options div label span {
+  color: #001a43;
+  font-size: 20px;
+  width: 80%;
+  padding: 15px 0px 15px 20px;
+}
+
+.options div label div {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #001a43;
+}
+
+.options div input {
+  display: none;
+}
+
+.options div input:checked + label div,
+.options div input:checked + label span {
+  color: white;
+  background-color: #001a43;
 }
