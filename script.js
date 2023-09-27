@@ -22,6 +22,12 @@ const bookRoomBtnBg = document.getElementById("book-room-btn-bg");
 const tickSection = document.getElementById("tick-section");
 const tick = document.getElementById("tick");
 
+// Extras from second Segmant
+const foundPrice_path = document.querySelector("#found-price path");
+const foundForText_path = document.querySelector("#found-for-text path");
+const foundBg = document.getElementById("found-bg");
+const foundBgStroke = document.getElementById("found-bg-stroke");
+
 // Third segmant
 const congratsText = document.getElementById("congrats-text");
 const savedAmountText = document.getElementById("saved-amount-text");
@@ -107,15 +113,20 @@ num5.onanimationend = () => {
 // };
 
 foundFor.onanimationend = () => {
-  foundSec.classList.add("animate");
+  foundPrice_path.classList.add("animate");
+  foundForText_path.classList.add("animate");
+  foundBg.classList.add("animate");
+  foundBgStroke.classList.add("animate");
 };
 
-foundSec.onanimationend = () => {
+foundBgStroke.onanimationend = () => {
   rebookBtnBg_rect.classList.add("animate");
 };
 
 rebookBtnBg_rect.onanimationend = () => {
   bookingScreen.classList.add("animate");
+  option3.checked = true;
+  if (clicked) clicked = false;
 };
 
 bookingScreen.onanimationend = () => {
@@ -127,7 +138,10 @@ bookingScreen.onanimationend = () => {
   num5.classList.remove("animate");
   searchingSec.classList.remove("animate");
   foundFor.classList.remove("animate");
-  foundSec.classList.remove("animate");
+  foundPrice_path.classList.remove("animate");
+  foundForText_path.classList.remove("animate");
+  foundBg.classList.remove("animate");
+  foundBgStroke.classList.remove("animate");
   rebookBtnBg_rect.classList.remove("animate");
 
   bookRoomBtnBg.classList.add("animate");
@@ -135,13 +149,17 @@ bookingScreen.onanimationend = () => {
 
 bookRoomBtnBg.onanimationend = () => {
   tickSection.classList.add("animate");
+};
+
+tickSection.onanimationend = () => {
+  bookingScreen.classList.remove("animate");
+  bookRoomBtnBg.classList.remove("animate");
+
   tick.classList.add("animate");
 };
 
 tick.onanimationend = () => {
   congratsText.classList.add("animate");
-  option3.checked = true;
-  if (clicked) clicked = false;
 };
 
 congratsText.onanimationend = () => {
@@ -156,8 +174,6 @@ cancelBtn.onanimationend = () => {
   setTimeout(() => {
     if (clicked) clicked = false;
     else {
-      bookingScreen.classList.remove("animate");
-      bookRoomBtnBg.classList.remove("animate");
       tickSection.classList.remove("animate");
       congratsText.classList.remove("animate");
       savedAmountText.classList.remove("animate");
@@ -197,13 +213,12 @@ label2.onclick = () => {
   }
 };
 label3.onclick = () => {
-  if (tickSection.classList.contains("animate")) return;
+  if (bookingScreen.classList.contains("animate")) return;
   else {
     phoneContent.classList.add("blur");
     appleTopBar.classList.add("blur");
     if (clicked) clicked = false;
     handleAnimatedStuff();
-    tickSection.classList.add("animate");
-    congratsText.classList.add("animate");
+    bookingScreen.classList.add("animate");
   }
 };

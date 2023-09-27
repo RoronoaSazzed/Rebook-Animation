@@ -262,7 +262,54 @@
   }
 }
 
-#found-sec {
+/* New Portion */
+
+#found-price path.animate,
+#found-for-text path.animate {
+  animation: Found__text 0.5s ease-in-out 0.5s 4 alternate;
+}
+
+@keyframes Found__text {
+  0% {
+    fill: #000000;
+  }
+
+  100% {
+    fill: #ffffff;
+  }
+}
+
+#found-for-bg > #found-bg.animate {
+  animation: Found__bg 0.5s linear 0.5s 4 alternate;
+}
+
+@keyframes Found__bg {
+  0% {
+    fill: #ffffff;
+  }
+
+  100% {
+    fill: #00194f;
+  }
+}
+
+#found-for-bg > #found-bg-stroke.animate {
+  animation: Found__bg__stroke 0.5s linear 0.5s 4 alternate;
+}
+
+@keyframes Found__bg__stroke {
+  0% {
+    stroke: #000000;
+  }
+
+  100% {
+    stroke: #ffffff;
+  }
+}
+
+/* New Portion */
+
+/* #found-sec {
   transform-box: fill-box;
   transform-origin: center;
 }
@@ -279,14 +326,14 @@
   100% {
     transform: scale(1.05);
   }
-}
+} */
 
 #rebook-btn-bg rect {
   fill: #00194f;
 }
 
 #rebook-btn-bg rect.animate {
-  animation: reebook__btn__bg 0.25s linear forwards;
+  animation: reebook__btn__bg 0.25s linear 0.25s forwards;
 }
 
 @keyframes reebook__btn__bg {
@@ -327,11 +374,11 @@
 @keyframes bookroom__btn__bg {
   0%,
   100% {
-    fill: #01275a;
+    fill: #003f91;
   }
 
   50% {
-    fill: #0047aa;
+    fill: #3087ff;
   }
 }
 
@@ -362,7 +409,7 @@
 }
 
 #tick.animate {
-  animation: tickIn 1.25s linear 0.75s forwards;
+  animation: tickIn 1.25s linear 0.25s forwards;
 }
 
 @keyframes tickIn {
@@ -390,7 +437,7 @@
 }
 
 #congrats-text.animate {
-  animation: fade__in 0.5s linear 0.75s forwards;
+  animation: fade__in 0.25s linear 0.5s forwards;
 }
 
 @keyframes fade__in {
@@ -413,7 +460,7 @@
 }
 
 #saved-amount-text.animate {
-  animation: fade__in 0.5s linear 0.5s forwards;
+  animation: fade__in 0.25s linear 0.5s forwards;
 }
 
 #cancel-btn {
@@ -424,7 +471,7 @@
 }
 
 #cancel-btn.animate {
-  animation: fade__in 0.5s linear 0.5s forwards;
+  animation: fade__in 0.25s linear 0.5s forwards;
 }
 
 /* Input tracker css */
