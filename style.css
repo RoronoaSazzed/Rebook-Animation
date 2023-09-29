@@ -15,10 +15,11 @@
 
 .mobile__section {
   width: 100%;
-  width: 354px;
-  height: 708px;
+  width: 310px;
+  height: 620px;
   overflow: hidden;
-  border-radius: 55px;
+  border-radius: 50px;
+  background-color: white;
 }
 
 /* 1st Sagement Animation */
@@ -43,7 +44,7 @@
   }
 
   100% {
-    transform: translateY(-510px);
+    transform: translateY(-450px);
   }
 }
 
@@ -123,7 +124,7 @@
   }
 }
 
-#send-btn-bg rect.animate {
+#send-btn-bg path.animate {
   animation: send__btn__bg 0.25s linear 0.5s;
 }
 
@@ -262,11 +263,9 @@
   }
 }
 
-/* New Portion */
-
 #found-price path.animate,
 #found-for-text path.animate {
-  animation: Found__text 0.5s ease-in-out 0.5s 4 alternate;
+  animation: Found__text 0.25s ease-in-out 0.5s 4 alternate;
 }
 
 @keyframes Found__text {
@@ -280,7 +279,7 @@
 }
 
 #found-for-bg > #found-bg.animate {
-  animation: Found__bg 0.5s linear 0.5s 4 alternate;
+  animation: Found__bg 0.25s linear 0.5s 4 alternate;
 }
 
 @keyframes Found__bg {
@@ -294,7 +293,7 @@
 }
 
 #found-for-bg > #found-bg-stroke.animate {
-  animation: Found__bg__stroke 0.5s linear 0.5s 4 alternate;
+  animation: Found__bg__stroke 0.25s linear 0.5s 4 alternate;
 }
 
 @keyframes Found__bg__stroke {
@@ -307,32 +306,11 @@
   }
 }
 
-/* New Portion */
-
-/* #found-sec {
-  transform-box: fill-box;
-  transform-origin: center;
-}
-
-#found-sec.animate {
-  animation: found__sec 0.25s linear 0.5s 4 alternate;
-}
-
-@keyframes found__sec {
-  0% {
-    transform: scale(1);
-  }
-
-  100% {
-    transform: scale(1.05);
-  }
-} */
-
-#rebook-btn-bg rect {
+#rebook-btn-bg path {
   fill: #00194f;
 }
 
-#rebook-btn-bg rect.animate {
+#rebook-btn-bg path.animate {
   animation: reebook__btn__bg 0.25s linear 0.25s forwards;
 }
 
@@ -367,8 +345,31 @@
   }
 }
 
+/* New Portion */
+
+#rebook-pricy-text {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+#rebook-pricy-text.animate {
+  animation: rebook_pricy__text 0.25s linear 0.5s 4 alternate;
+}
+
+@keyframes rebook_pricy__text {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* New Portion */
+
 #book-room-btn-bg.animate {
-  animation: bookroom__btn__bg 0.25s linear 1s forwards;
+  animation: bookroom__btn__bg 0.25s linear 0.5s forwards;
 }
 
 @keyframes bookroom__btn__bg {
@@ -478,6 +479,7 @@
 
 .options {
   padding: 20px 40px;
+  position: relative;
 }
 
 .options h3 {
@@ -517,15 +519,135 @@
 .options div label div {
   width: 20px;
   height: 20px;
+  background-color: white;
+  z-index: 10;
+  border: 2px solid grey;
+}
+
+.options div label div.choosen {
   border: 2px solid #001a43;
+  background-color: #001a43;
 }
 
 .options div input {
   display: none;
 }
 
-.options div input:checked + label div,
 .options div input:checked + label span {
   color: white;
   background-color: #001a43;
+}
+
+/* Clip Top to Bottom
+
+.clip__down {
+  animation: clip__down 1s linear forwards;
+}
+
+Here 1s is a sample duration, the duration will be dynamically set using JS between sagement
+
+@keyframes clip__down {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+} */
+
+.line {
+  right: 48px;
+  position: absolute;
+  top: 130px;
+  width: 4px;
+  height: 45%;
+  background-color: rgb(196, 196, 196);
+}
+
+.line .inside {
+  display: block;
+  content: "";
+  width: 100%;
+  background-color: #001a43;
+}
+.line .inside.first {
+  animation: firstAnime 6s linear forwards;
+}
+.line .inside.mid {
+  animation: lastAnime 6.5s linear forwards;
+}
+.line .inside.last {
+  height: 100%;
+}
+
+@keyframes firstAnime {
+  from {
+    height: 5%;
+  }
+
+  to {
+    height: 45%;
+  }
+}
+
+@keyframes lastAnime {
+  from {
+    height: 55%;
+  }
+
+  to {
+    height: 95%;
+  }
+}
+@media (max-width: 956px) and (min-width: 769px) {
+  .line {
+    top: 175px;
+    height: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__section {
+    flex-direction: column-reverse;
+  }
+
+  .options h3 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 456px) {
+  .line {
+    top: 160px;
+    height: 45%;
+  }
+}
+@media (max-width: 408px) {
+  .line {
+    height: 49%;
+  }
+}
+@media (max-width: 359px) {
+  .line {
+    top: 177px;
+  }
+}
+@media (max-width: 313px) {
+  .line {
+    top: 227px;
+    height: 45%;
+  }
+}
+@media (max-width: 257px) {
+  .line {
+    top: 248px;
+    height: 48%;
+  }
+}
+@media (max-width: 234px) {
+  .line {
+    height: 50%;
+  }
 }
